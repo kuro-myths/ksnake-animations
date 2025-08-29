@@ -1,18 +1,28 @@
-# 🐍 Multi Snake Animations
+# 🐍 Multi Snake Animations  
 
-Berikut 5 varian ular kontribusi dengan kotak oranye 🟧:
+Hi, I'm **kuro 🐉**  
 
-🔵 Biru  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-blue.svg" />
+Berikut adalah animasi kontribusi GitHub-ku dengan **5 ular berbeda warna**.  
+Kotak-kotak kontribusinya berwarna **oranye** 🟧 biar beda dari default hijau.  
 
-🟢 Hijau  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-green.svg" />
+---
 
-🟣 Ungu  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-purple.svg" />
+## 🐍 Blue Snake
+![github-snake-blue](https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-blue.svg)
 
-🟡 Kuning  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-yellow.svg" />
+## 🐍 Green Snake
+![github-snake-green](https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-green.svg)
 
-🔴 Merah  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-red.svg" />
+## 🐍 Purple Snake
+![github-snake-purple](https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-purple.svg)
+
+## 🐍 Yellow Snake
+![github-snake-yellow](https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-yellow.svg)
+
+## 🐍 Red Snake
+![github-snake-red](https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-red.svg)
+
+---
+
+✨ Workflow ini otomatis update tiap hari jam 00:00 UTC.  
+Kamu bisa lihat semua hasilnya di branch `output`.  
