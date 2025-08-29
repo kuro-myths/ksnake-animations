@@ -1,18 +1,38 @@
-# 🐍 Multi Snake Animations
+name: Generate Multi Snake Animations
 
-Berikut 5 varian ular kontribusi dengan kotak oranye 🟧:
+on:
+  schedule: # jalan otomatis tiap hari jam 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch: # bisa dijalankan manual dari tab Actions
 
-🔵 Biru  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-blue.svg" />
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
-🟢 Hijau  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-green.svg" />
+    steps:
+      # Step 1: checkout repository
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-🟣 Ungu  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-purple.svg" />
+      # Step 2: Generate multiple snake animations
+      - name: Generate Snakes 🐍
+        uses: Platane/snk@v3
+        with:
+          github_user_name: kuro-myths
+          outputs: |
+            dist/github-snake-blue.svg?color_snake=blue&color_dots=#ffcc80,#ffb74d,#ffa726,#fb8c00,#ef6c00
+            dist/github-snake-green.svg?color_snake=green&color_dots=#ffcc80,#ffb74d,#ffa726,#fb8c00,#ef6c00
+            dist/github-snake-purple.svg?color_snake=purple&color_dots=#ffcc80,#ffb74d,#ffa726,#fb8c00,#ef6c00
+            dist/github-snake-yellow.svg?color_snake=yellow&color_dots=#ffcc80,#ffb74d,#ffa726,#fb8c00,#ef6c00
+            dist/github-snake-red.svg?color_snake=red&color_dots=#ffcc80,#ffb74d,#ffa726,#fb8c00,#ef6c00
 
-🟡 Kuning  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-yellow.svg" />
-
-🔴 Merah  
-<img src="https://raw.githubusercontent.com/kuro-myths/snake-animations/output/github-snake-red.svg" />
+      # Step 3: Push hasilnya ke branch output
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
